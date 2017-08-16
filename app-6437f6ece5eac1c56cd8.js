@@ -549,7 +549,7 @@ webpackJsonp([15178676390636814000],{
 	    pages = newPages;
 	    var pathPrefix = "";
 	    if (true) {
-	      pathPrefix = ("");
+	      pathPrefix = ("/Personal-Website-v2");
 	    }
 	    findPage = (0, _findPage2.default)(newPages, pathPrefix);
 	  },
@@ -1075,7 +1075,7 @@ webpackJsonp([15178676390636814000],{
 	
 	var pathPrefix = "/";
 	if (true) {
-	  pathPrefix = ("") + "/";
+	  pathPrefix = ("/Personal-Website-v2") + "/";
 	}
 	
 	if ("serviceWorker" in navigator) {
