@@ -51,15 +51,15 @@ webpackJsonp([15178676390636814000],{
 	};
 	
 	exports.components = {
-	  "component---src-pages-404-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-404-js!./src/pages/404.js"),
 	  "component---src-pages-index-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-index-js!./src/pages/index.js"),
+	  "component---src-pages-404-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-404-js!./src/pages/404.js"),
 	  "component---src-pages-page-2-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-page-2-js!./src/pages/page-2.js")
 	};
 	
 	exports.json = (_exports$json = {
 	  "layout-index.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"),
-	  "404.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404!./.cache/json/404.json")
-	}, _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---index!./.cache/json/index.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["page-2.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---page-2!./.cache/json/page-2.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["404-html.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404-html!./.cache/json/404-html.json"), _exports$json);
+	  "index.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---index!./.cache/json/index.json")
+	}, _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["404.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404!./.cache/json/404.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["page-2.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---page-2!./.cache/json/page-2.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["404-html.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404-html!./.cache/json/404-html.json"), _exports$json);
 	
 	exports.layouts = {
 	  "component---src-layouts-index-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-layouts-index-js!./.cache/layouts/index.js")
@@ -781,7 +781,7 @@ webpackJsonp([15178676390636814000],{
 /***/ "./.cache/pages.json":
 /***/ (function(module, exports) {
 
-	module.exports = [{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404.json","path":"/404/"},{"componentChunkName":"component---src-pages-index-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"index.json","path":"/"},{"componentChunkName":"component---src-pages-page-2-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"page-2.json","path":"/page-2/"},{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404-html.json","path":"/404.html"}]
+	module.exports = [{"componentChunkName":"component---src-pages-index-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"index.json","path":"/"},{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404.json","path":"/404/"},{"componentChunkName":"component---src-pages-page-2-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"page-2.json","path":"/page-2/"},{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404-html.json","path":"/404.html"}]
 
 /***/ }),
 
@@ -1561,4 +1561,4 @@ webpackJsonp([15178676390636814000],{
 /***/ })
 
 });
-//# sourceMappingURL=app-6437f6ece5eac1c56cd8.js.map
+//# sourceMappingURL=app-404c8254a6d0e0b08df2.js.map
