@@ -5,6 +5,9 @@ webpackJsonp([15178676390636814000],{
 
 	"use strict";
 	
+	exports.__esModule = true;
+	exports.apiRunner = apiRunner;
+	exports.apiRunnerAsync = apiRunnerAsync;
 	var plugins = [];
 	// During bootstrap, we write requires at top of this file which looks
 	// basically like:
@@ -13,8 +16,7 @@ webpackJsonp([15178676390636814000],{
 	//   require('/path/to/plugin2/gatsby-browser.js'),
 	// ]
 	
-	module.exports = function (api, args, defaultReturn) {
-	  // Run each plugin in series.
+	function apiRunner(api, args, defaultReturn) {
 	  var results = plugins.map(function (plugin) {
 	    if (plugin.plugin[api]) {
 	      var result = plugin.plugin[api](args, plugin.options);
@@ -34,7 +36,15 @@ webpackJsonp([15178676390636814000],{
 	  } else {
 	    return [];
 	  }
-	};
+	}
+	
+	function apiRunnerAsync(api, args, defaultReturn) {
+	  return plugins.reduce(function (previous, next) {
+	    return next.plugin[api] ? previous.then(function () {
+	      return next.plugin[api](args, next.options);
+	    }) : previous;
+	  }, Promise.resolve());
+	}
 
 /***/ }),
 
@@ -51,15 +61,15 @@ webpackJsonp([15178676390636814000],{
 	};
 	
 	exports.components = {
-	  "component---src-pages-index-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-index-js!./src/pages/index.js"),
 	  "component---src-pages-404-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-404-js!./src/pages/404.js"),
+	  "component---src-pages-index-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-index-js!./src/pages/index.js"),
 	  "component---src-pages-page-2-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-pages-page-2-js!./src/pages/page-2.js")
 	};
 	
 	exports.json = (_exports$json = {
 	  "layout-index.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"),
-	  "index.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---index!./.cache/json/index.json")
-	}, _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["404.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404!./.cache/json/404.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["page-2.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---page-2!./.cache/json/page-2.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["404-html.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404-html!./.cache/json/404-html.json"), _exports$json);
+	  "404.json": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404!./.cache/json/404.json")
+	}, _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---index!./.cache/json/index.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["page-2.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---page-2!./.cache/json/page-2.json"), _exports$json["layout-index.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---!./.cache/json/layout-index.json"), _exports$json["404-html.json"] = __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=path---404-html!./.cache/json/404-html.json"), _exports$json);
 	
 	exports.layouts = {
 	  "component---src-layouts-index-js": __webpack_require__("./node_modules/gatsby/dist/loaders/gatsby-module-loader/index.js?name=component---src-layouts-index-js!./.cache/layouts/index.js")
@@ -408,7 +418,7 @@ webpackJsonp([15178676390636814000],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./.cache/layouts/index.js") })
+	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./.cache/layouts/index.js") })
 	        }
 	      });
 	     }
@@ -508,7 +518,7 @@ webpackJsonp([15178676390636814000],{
 	    });
 	  } else {
 	    // Find resource
-	    var resourceFunction = resourceName.slice(0, 9) === "component" ? asyncRequires.components[resourceName] || asyncRequires.layouts[resourceName] : asyncRequires.json[resourceName];
+	    var resourceFunction = resourceName.slice(0, 12) === "component---" ? asyncRequires.components[resourceName] || asyncRequires.layouts[resourceName] : asyncRequires.json[resourceName];
 	
 	    // Download the resource
 	    resourceFunction(function (err, executeChunk) {
@@ -781,7 +791,7 @@ webpackJsonp([15178676390636814000],{
 /***/ "./.cache/pages.json":
 /***/ (function(module, exports) {
 
-	module.exports = [{"componentChunkName":"component---src-pages-index-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"index.json","path":"/"},{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404.json","path":"/404/"},{"componentChunkName":"component---src-pages-page-2-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"page-2.json","path":"/page-2/"},{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404-html.json","path":"/404.html"}]
+	module.exports = [{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404.json","path":"/404/"},{"componentChunkName":"component---src-pages-index-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"index.json","path":"/"},{"componentChunkName":"component---src-pages-page-2-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"page-2.json","path":"/page-2/"},{"componentChunkName":"component---src-pages-404-js","layout":"index","layoutComponentChunkName":"component---src-layouts-index-js","jsonName":"404-html.json","path":"/404.html"}]
 
 /***/ }),
 
@@ -877,8 +887,6 @@ webpackJsonp([15178676390636814000],{
 	
 	var _apiRunnerBrowser = __webpack_require__("./.cache/api-runner-browser.js");
 	
-	var _apiRunnerBrowser2 = _interopRequireDefault(_apiRunnerBrowser);
-	
 	var _react = __webpack_require__("./node_modules/react/react.js");
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -921,141 +929,143 @@ webpackJsonp([15178676390636814000],{
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	if (true) {
+	  __webpack_require__("./node_modules/core-js/modules/es6.promise.js");
+	}
+	
 	window.___emitter = _emitter2.default;
-	// emitter.on(`*`, (type, e) => console.log(`emitter`, type, e))
 	
 	_loader2.default.addPagesArray(_pages2.default);
 	_loader2.default.addProdRequires(_asyncRequires2.default);
 	window.asyncRequires = _asyncRequires2.default;
-	
 	window.___loader = _loader2.default;
-	
 	window.matchPath = _reactRouterDom.matchPath;
+	
 	// Let the site/plugins run code very early.
-	(0, _apiRunnerBrowser2.default)("onClientEntry");
-	
-	// Let plugins register a service worker. The plugin just needs
-	// to return true.
-	if ((0, _apiRunnerBrowser2.default)("registerServiceWorker").length > 0) {
-	  __webpack_require__("./.cache/register-service-worker.js");
-	}
-	
-	var navigateTo = function navigateTo(pathname) {
-	  // If we're already at this path, do nothing.
-	  if (window.location.pathname === pathname) {
-	    return;
+	(0, _apiRunnerBrowser.apiRunnerAsync)("onClientEntry").then(function () {
+	  // Let plugins register a service worker. The plugin just needs
+	  // to return true.
+	  if ((0, _apiRunnerBrowser.apiRunner)("registerServiceWorker").length > 0) {
+	    __webpack_require__("./.cache/register-service-worker.js");
 	  }
 	
-	  // Listen to loading events. If page resources load before
-	  // a second, navigate immediately.
-	  function eventHandler(e) {
-	    if (e.page.path === _loader2.default.getPage(pathname).path) {
+	  var navigateTo = function navigateTo(pathname) {
+	    // If we're already at this path, do nothing.
+	    if (window.location.pathname === pathname) {
+	      return;
+	    }
+	
+	    // Listen to loading events. If page resources load before
+	    // a second, navigate immediately.
+	    function eventHandler(e) {
+	      if (e.page.path === _loader2.default.getPage(pathname).path) {
+	        _emitter2.default.off("onPostLoadPageResources", eventHandler);
+	        clearTimeout(timeoutId);
+	        window.___history.push(pathname);
+	      }
+	    }
+	
+	    // Start a timer to wait for a second before transitioning and showing a
+	    // loader in case resources aren't around yet.
+	    var timeoutId = setTimeout(function () {
 	      _emitter2.default.off("onPostLoadPageResources", eventHandler);
+	      _emitter2.default.emit("onDelayedLoadPageResources", { pathname: pathname });
+	      window.___history.push(pathname);
+	    }, 1000);
+	
+	    if (_loader2.default.getResourcesForPathname(pathname)) {
+	      // The resources are already loaded so off we go.
 	      clearTimeout(timeoutId);
 	      window.___history.push(pathname);
+	    } else {
+	      // They're not loaded yet so let's add a listener for when
+	      // they finish loading.
+	      _emitter2.default.on("onPostLoadPageResources", eventHandler);
 	    }
-	  }
-	
-	  // Start a timer to wait for a second before transitioning and showing a
-	  // loader in case resources aren't around yet.
-	  var timeoutId = setTimeout(function () {
-	    _emitter2.default.off("onPostLoadPageResources", eventHandler);
-	    _emitter2.default.emit("onDelayedLoadPageResources", { pathname: pathname });
-	    window.___history.push(pathname);
-	  }, 1000);
-	
-	  if (_loader2.default.getResourcesForPathname(pathname)) {
-	    // The resources are already loaded so off we go.
-	    clearTimeout(timeoutId);
-	    window.___history.push(pathname);
-	  } else {
-	    // They're not loaded yet so let's add a listener for when
-	    // they finish loading.
-	    _emitter2.default.on("onPostLoadPageResources", eventHandler);
-	  }
-	};
-	
-	// window.___loadScriptsForPath = loadScriptsForPath
-	window.___navigateTo = navigateTo;
-	
-	var history = (0, _createBrowserHistory2.default)();
-	
-	// Call onRouteUpdate on the initial page load.
-	(0, _apiRunnerBrowser2.default)("onRouteUpdate", {
-	  location: history.location,
-	  action: history.action
-	});
-	
-	function attachToHistory(history) {
-	  if (!window.___history) {
-	    window.___history = history;
-	
-	    history.listen(function (location, action) {
-	      (0, _apiRunnerBrowser2.default)("onRouteUpdate", { location: location, action: action });
-	    });
-	  }
-	}
-	
-	function shouldUpdateScroll(prevRouterProps, _ref) {
-	  var pathname = _ref.location.pathname;
-	
-	  var results = (0, _apiRunnerBrowser2.default)("shouldUpdateScroll", {
-	    prevRouterProps: prevRouterProps,
-	    pathname: pathname
-	  });
-	  if (results.length > 0) {
-	    return results[0];
-	  }
-	
-	  if (prevRouterProps) {
-	    var oldPathname = prevRouterProps.location.pathname;
-	
-	    if (oldPathname === pathname) {
-	      return false;
-	    }
-	  }
-	  return true;
-	}
-	
-	var AltRouter = (0, _apiRunnerBrowser2.default)("replaceRouterComponent", { history: history })[0];
-	var DefaultRouter = function DefaultRouter(_ref2) {
-	  var children = _ref2.children;
-	  return _react2.default.createElement(
-	    _reactRouterDom.BrowserRouter,
-	    { history: history },
-	    children
-	  );
-	};
-	
-	_loader2.default.getResourcesForPathname(window.location.pathname, function () {
-	  var Root = function Root() {
-	    return (0, _react.createElement)(AltRouter ? AltRouter : DefaultRouter, null, (0, _react.createElement)(_reactRouterScroll.ScrollContext, { shouldUpdateScroll: shouldUpdateScroll }, (0, _react.createElement)((0, _reactRouterDom.withRouter)(_componentRenderer2.default), {
-	      layout: true,
-	      children: function children(layoutProps) {
-	        return (0, _react.createElement)(_reactRouterDom.Route, {
-	          render: function render(routeProps) {
-	            attachToHistory(routeProps.history);
-	            var props = layoutProps ? layoutProps : routeProps;
-	
-	            if (_loader2.default.getPage(props.location.pathname)) {
-	              return (0, _react.createElement)(_componentRenderer2.default, _extends({
-	                page: true
-	              }, props));
-	            } else {
-	              return (0, _react.createElement)(_componentRenderer2.default, {
-	                location: { page: true, pathname: "/404.html" }
-	              });
-	            }
-	          }
-	        });
-	      }
-	    })));
 	  };
 	
-	  var NewRoot = (0, _apiRunnerBrowser2.default)("wrapRootComponent", { Root: Root }, Root)[0];
-	  (0, _domready2.default)(function () {
-	    return _reactDom2.default.render(_react2.default.createElement(NewRoot, null), typeof window !== "undefined" ? document.getElementById("___gatsby") : void 0, function () {
-	      (0, _apiRunnerBrowser2.default)("onInitialClientRender");
+	  // window.___loadScriptsForPath = loadScriptsForPath
+	  window.___navigateTo = navigateTo;
+	
+	  var history = (0, _createBrowserHistory2.default)();
+	
+	  // Call onRouteUpdate on the initial page load.
+	  (0, _apiRunnerBrowser.apiRunner)("onRouteUpdate", {
+	    location: history.location,
+	    action: history.action
+	  });
+	
+	  function attachToHistory(history) {
+	    if (!window.___history) {
+	      window.___history = history;
+	
+	      history.listen(function (location, action) {
+	        (0, _apiRunnerBrowser.apiRunner)("onRouteUpdate", { location: location, action: action });
+	      });
+	    }
+	  }
+	
+	  function shouldUpdateScroll(prevRouterProps, _ref) {
+	    var pathname = _ref.location.pathname;
+	
+	    var results = (0, _apiRunnerBrowser.apiRunner)("shouldUpdateScroll", {
+	      prevRouterProps: prevRouterProps,
+	      pathname: pathname
+	    });
+	    if (results.length > 0) {
+	      return results[0];
+	    }
+	
+	    if (prevRouterProps) {
+	      var oldPathname = prevRouterProps.location.pathname;
+	
+	      if (oldPathname === pathname) {
+	        return false;
+	      }
+	    }
+	    return true;
+	  }
+	
+	  var AltRouter = (0, _apiRunnerBrowser.apiRunner)("replaceRouterComponent", { history: history })[0];
+	  var DefaultRouter = function DefaultRouter(_ref2) {
+	    var children = _ref2.children;
+	    return _react2.default.createElement(
+	      _reactRouterDom.BrowserRouter,
+	      { history: history },
+	      children
+	    );
+	  };
+	
+	  _loader2.default.getResourcesForPathname(window.location.pathname, function () {
+	    var Root = function Root() {
+	      return (0, _react.createElement)(AltRouter ? AltRouter : DefaultRouter, null, (0, _react.createElement)(_reactRouterScroll.ScrollContext, { shouldUpdateScroll: shouldUpdateScroll }, (0, _react.createElement)((0, _reactRouterDom.withRouter)(_componentRenderer2.default), {
+	        layout: true,
+	        children: function children(layoutProps) {
+	          return (0, _react.createElement)(_reactRouterDom.Route, {
+	            render: function render(routeProps) {
+	              attachToHistory(routeProps.history);
+	              var props = layoutProps ? layoutProps : routeProps;
+	
+	              if (_loader2.default.getPage(props.location.pathname)) {
+	                return (0, _react.createElement)(_componentRenderer2.default, _extends({
+	                  page: true
+	                }, props));
+	              } else {
+	                return (0, _react.createElement)(_componentRenderer2.default, {
+	                  location: { page: true, pathname: "/404.html" }
+	                });
+	              }
+	            }
+	          });
+	        }
+	      })));
+	    };
+	
+	    var NewRoot = (0, _apiRunnerBrowser.apiRunner)("wrapRootComponent", { Root: Root }, Root)[0];
+	    (0, _domready2.default)(function () {
+	      return _reactDom2.default.render(_react2.default.createElement(NewRoot, null), typeof window !== "undefined" ? document.getElementById("___gatsby") : void 0, function () {
+	        (0, _apiRunnerBrowser.apiRunner)("onInitialClientRender");
+	      });
 	    });
 	  });
 	});
@@ -1195,11 +1205,11 @@ webpackJsonp([15178676390636814000],{
 	      } else {
 	        handler();
 	      }
-	    }
+	    });
 	
 	    // This is |true| if chunk is already loaded and does not need onError call.
 	    // This happens because in such case ensure() is performed in sync way
-	    );if (loaded) {
+	    if (loaded) {
 	      return;
 	    }
 	
@@ -1510,7 +1520,7 @@ webpackJsonp([15178676390636814000],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./src/pages/404.js") })
+	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./src/pages/404.js") })
 	        }
 	      });
 	     }
@@ -1531,7 +1541,7 @@ webpackJsonp([15178676390636814000],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./src/pages/index.js") })
+	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./src/pages/index.js") })
 	        }
 	      });
 	     }
@@ -1552,7 +1562,7 @@ webpackJsonp([15178676390636814000],{
 	          console.log('bundle loading error', error)
 	          cb(true)
 	        } else {
-	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/personal-website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./src/pages/page-2.js") })
+	          cb(null, function() { return __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"plugins\":[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-add-module-exports/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-plugin-transform-object-assign/lib/index.js\"],\"presets\":[[\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-env/lib/index.js\",{\"loose\":true,\"uglify\":true,\"modules\":\"commonjs\",\"targets\":{\"browsers\":[\"> 1%\",\"last 2 versions\",\"IE >= 9\"]},\"exclude\":[\"transform-regenerator\",\"transform-es2015-typeof-symbol\"]}],\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-stage-0/lib/index.js\",\"/Users/paulsimon.ongpin/workspace/Personal-Website-v2/node_modules/babel-preset-react/lib/index.js\"],\"cacheDirectory\":true}!./src/pages/page-2.js") })
 	        }
 	      });
 	     }
@@ -1561,4 +1571,4 @@ webpackJsonp([15178676390636814000],{
 /***/ })
 
 });
-//# sourceMappingURL=app-404c8254a6d0e0b08df2.js.map
+//# sourceMappingURL=app-e4c6482461e8a220b8a9.js.map
