@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './index.scss'
+import '../styles/index.scss'
 
 const Header = () =>
   <div>
@@ -21,8 +21,7 @@ const TemplateWrapper = ({ children }) =>
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
-    <div>
+    <div className='site-content'>
       {children()}
     </div>
   </div>
