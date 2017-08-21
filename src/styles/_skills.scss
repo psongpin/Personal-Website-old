@@ -1,0 +1,14 @@
+.skills{
+
+  .skill-img{
+
+    img{
+      width: 125px;
+      margin-bottom: 50px;
+      filter: grayscale(1);
+      @include defaultTransition();
+
+      &:hover{ filter: grayscale(0); }
+    }
+  }
+}

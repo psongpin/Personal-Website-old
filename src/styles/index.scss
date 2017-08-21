@@ -1,1 +1,16 @@
+@import '_mixins';
+
+body{ font-family: 'Poppins', sans-serif; }
+
 .section{ padding: 3rem 0; }
+
+.home-banner-section{ @include sectionBgColorScheme(#40A0E0, #ffffff); }
+
+.about-section { @include sectionBgColorScheme(#F0B840, #fff); }
+
+.portfolio-section { @include sectionBgColorScheme(#40C080, #ffffff) }
+
+.contact-section{ @include sectionBgColorScheme(#40C8F0, #ffffff) }
+
+
+@import '_skills';
