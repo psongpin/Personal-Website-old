@@ -1,0 +1,29 @@
+.home-banner{
+
+  .col{
+    min-height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-content{
+    
+    h1{
+      font-size: 2.9rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .h3{
+      letter-spacing: 2px;
+      margin-bottom: .5rem;
+    }
+    
+    .text{
+      font-size: 1.25rem;
+    }
+  }
+
+}

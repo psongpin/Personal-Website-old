@@ -10,6 +10,7 @@ $sky-blue: #40C8F0;
 
 // Global Styles
 body{ font-family: 'Poppins', sans-serif; }
+
 h1, .h1{ font-size: 2.75rem; }
 h2, .h2{ font-size: 2.5rem; }
 h3, .h3{ font-size: 2rem; }
@@ -22,7 +23,7 @@ h5, .h5{ font-size: 1.5rem; }
   .section-header{
     margin-bottom: 1em;
     text-transform: uppercase;
-    letter-spacing: 2.75px;  
+    letter-spacing: 2px;  
   }
 }
 
@@ -34,6 +35,6 @@ h5, .h5{ font-size: 1.5rem; }
 
 .contact-section{ @include sectionBgColorScheme($sky-blue, $white) }
 
-
+@import '_homeBanner';
 @import '_skills';
 @import '_contact';

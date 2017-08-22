@@ -3,7 +3,7 @@ import { Container } from 'reactstrap'
 
 const Portfolio = () =>
   <Container className="portfolio">
-    <h1>Portfolio</h1>
+    <h2 className="section-header text-center">Portfolio</h2>
   </Container>
 
 export default Portfolio
