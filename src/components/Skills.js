@@ -32,7 +32,7 @@ const skillArr = [
 
 const Skills = () =>
   <Container className='skills text-center'>
-    <h1>Skills</h1>
+    <h2 className='section-header'>Skills</h2>
     <SkillList skillArr={skillArr} />
   </Container>
 
