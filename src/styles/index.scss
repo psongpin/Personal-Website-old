@@ -1,27 +1,39 @@
 @import '_mixins';
 
+// Variables
+$blue: #40A0E0;
+$white: #ffffff;
+$yellow: #F0B840;
+$green: #40C080;
+$sky-blue: #40C8F0;
+
+
+// Global Styles
 body{ font-family: 'Poppins', sans-serif; }
-h1{ font-size: 3rem; }
-h2{ font-size: 2.5rem; }
-h3{ font-size: 2rem; }
-h4{ font-size: 1.75rem; }
-h5{ font-size: 1.5rem; }
+h1, .h1{ font-size: 2.75rem; }
+h2, .h2{ font-size: 2.5rem; }
+h3, .h3{ font-size: 2rem; }
+h4, .h4{ font-size: 1.75rem; }
+h5, .h5{ font-size: 1.5rem; }
 
 .section{ 
-  padding: 3rem 0; 
+  padding: 3.5rem 0; 
 
   .section-header{
-    margin-bottom: 1em;  
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2.75px;  
   }
 }
 
-.home-banner-section{ @include sectionBgColorScheme(#40A0E0, #ffffff); }
+.home-banner-section{ @include sectionBgColorScheme($blue, $white); }
 
-.about-section { @include sectionBgColorScheme(#F0B840, #fff); }
+.about-section { @include sectionBgColorScheme($yellow, $white); }
 
-.portfolio-section { @include sectionBgColorScheme(#40C080, #ffffff) }
+.portfolio-section { @include sectionBgColorScheme($green, $white) }
 
-.contact-section{ @include sectionBgColorScheme(#40C8F0, #ffffff) }
+.contact-section{ @include sectionBgColorScheme($sky-blue, $white) }
 
 
 @import '_skills';
+@import '_contact';
