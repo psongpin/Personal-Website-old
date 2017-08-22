@@ -35,6 +35,8 @@ h5, .h5{ font-size: 1.5rem; }
 
 .contact-section{ @include sectionBgColorScheme($sky-blue, $white) }
 
+
+@import '_header';
 @import '_homeBanner';
 @import '_skills';
 @import '_contact';

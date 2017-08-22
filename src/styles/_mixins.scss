@@ -2,6 +2,10 @@
   transition: all .4s ease-out;
 }
 
+@mixin customTransition($duration) {
+  transition: all $duration ease-out;
+}
+
 @mixin sectionBgColorScheme($bgColor, $textColor) {
   background-color: $bgColor;
   color: $textColor;
