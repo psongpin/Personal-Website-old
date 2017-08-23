@@ -9,11 +9,11 @@ import Contact from '../components/Contact'
 
 const IndexPage = () =>
   <div className='page-sections'>
-    <Section className="home-banner-section"><HomeBanner /></Section>
-    <Section className="about-section"><About /></Section>
-    <Section className="skills-section"><Skills /></Section>
-    <Section className="portfolio-section"><Portfolio /></Section>
-    <Section className="contact-section"><Contact /></Section>
+    <Section id="home" className="home-banner-section"><HomeBanner /></Section>
+    <Section id="about-me" className="about-section"><About /></Section>
+    <Section id="skills" className="skills-section"><Skills /></Section>
+    <Section id="portfolio" className="portfolio-section"><Portfolio /></Section>
+    <Section id="contact" className="contact-section"><Contact /></Section>
   </div>
 
 export default IndexPage

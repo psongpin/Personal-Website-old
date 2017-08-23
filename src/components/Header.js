@@ -8,10 +8,10 @@ export default class Header extends Component {
         <Container>
           <nav className="primary-menu">
             <ul className="nav">
-              <li><a href="#"><span>Home</span></a></li>
-              <li><a href="#"><span>About Me</span></a></li>
-              <li><a href="#"><span>Portfolio</span></a></li>
-              <li><a href="#"><span>Contact</span></a></li>
+              <li><a href="#home"><span>Home</span></a></li>
+              <li><a href="#about-me"><span>About Me</span></a></li>
+              <li><a href="#portfolio"><span>Portfolio</span></a></li>
+              <li><a href="#contact"><span>Contact</span></a></li>
             </ul>
           </nav>
         </Container>

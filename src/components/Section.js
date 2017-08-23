@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Section = ({className, children}) =>
-  <div className={`${className} section`}>
+const Section = ({className, id, children}) =>
+  <div className={`${className} section`} id={id}>
     {children}
   </div>
 
