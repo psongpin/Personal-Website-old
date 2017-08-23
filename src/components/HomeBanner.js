@@ -6,8 +6,9 @@ const HomeBaner = () =>
     <Row className="home-banner-row">
 
       <Col className="text-content">
-        <h1>#juniorDevForLife</h1>
-        <p className="h3">Fail. Learn. Succeed.</p>
+        <h1>Paul Simon Ongpin</h1>
+        <hr className="divider" />
+        <p className="h4">Front-end Web Developer</p>
         <p className="text">Committed to Learn Forever.</p>
       </Col>
       
