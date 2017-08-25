@@ -11,33 +11,33 @@ import { Element } from 'react-scroll'
 
 const IndexPage = () =>
   <div className='page-sections'>
-    <Section id="home" className="home-banner-section">
-      <Element name="home">
+    <Element name="home">
+      <Section id="home" className="home-banner-section">
         <HomeBanner />
-      </Element>
-    </Section>
+      </Section>
+    </Element>
     
-    <Section id="about-me" className="about-section">
-      <Element name="about">
+    <Element name="about">
+      <Section id="about-me" className="about-section">
         <About />
-      </Element>
-    </Section>
+      </Section>
+    </Element>
     
     <Section id="skills" className="skills-section">
       <Skills />
     </Section>
     
-    <Section id="portfolio" className="portfolio-section">
-      <Element name="portfolio">
-        <Portfolio />
-      </Element>
-    </Section>
-    
-    <Section id="contact" className="contact-section">
-      <Element name="contact">
+    <Element name="portfolio">
+      <Section id="portfolio" className="portfolio-section">
+          <Portfolio />
+      </Section>
+    </Element>
+
+    <Element name="contact">
+      <Section id="contact" className="contact-section">
         <Contact />
-      </Element>
-    </Section>
+      </Section>
+    </Element>
   </div>
 
 export default IndexPage
