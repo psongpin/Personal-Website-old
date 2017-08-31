@@ -6,30 +6,55 @@ $white: #ffffff;
 $yellow: #F0B840;
 $green: #40C080;
 $sky-blue: #40C8F0;
+$semi-black: #1F2D3D;
 
 
 // Global Styles
 body{ font-family: 'Poppins', sans-serif; }
 
-h1, .h1{ font-size: 2.75rem; }
-h2, .h2{ font-size: 2.5rem; }
-h3, .h3{ font-size: 2rem; }
-h4, .h4{ font-size: 1.75rem; }
-h5, .h5{ font-size: 1.5rem; }
+h1, .h1{ 
+  font-size: 2.75rem; 
+  letter-spacing: .15rem; 
+  line-height: 3.25rem; 
+}
+h2, .h2{ 
+  font-size: 2.5rem; 
+  letter-spacing: .15rem; 
+  line-height: 3rem; 
+}
+h3, .h3{ 
+  font-size: 2rem; 
+  letter-spacing: .15rem; 
+  line-height: 2.5rem; 
+}
+h4, .h4{ 
+  font-size: 1.75rem; 
+  letter-spacing: .15rem; 
+  line-height: 2.25rem; 
+}
+h5, .h5{ 
+  font-size: 1.5rem; 
+  letter-spacing: .15rem; 
+  line-height: 2rem; 
+}
+
+p { letter-spacing: .1rem; line-height: 1.75rem; }
+
+a { cursor: pointer; }
 
 .section{ 
   padding: 3.5rem 0; 
 
   .section-header{
     margin-bottom: 1em;
-    text-transform: uppercase;
-    letter-spacing: 2px;  
+    text-transform: uppercase; 
   }
+
 }
 
 .home-banner-section{ @include sectionBgColorScheme($blue, $white); }
 
-.about-section { @include sectionBgColorScheme($yellow, $white); }
+.about-section { @include sectionBgColorScheme($yellow, $semi-black); }
 
 .portfolio-section { @include sectionBgColorScheme($green, $white) }
 
@@ -38,5 +63,6 @@ h5, .h5{ font-size: 1.5rem; }
 
 @import '_header';
 @import '_homeBanner';
+@import '_about';
 @import '_skills';
 @import '_contact';

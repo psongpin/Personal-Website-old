@@ -23,9 +23,11 @@ const IndexPage = () =>
       </Section>
     </Element>
     
-    <Section id="skills" className="skills-section">
-      <Skills />
-    </Section>
+    <Element name="skills">
+      <Section id="skills" className="skills-section">
+        <Skills />
+      </Section>
+    </Element>
     
     <Element name="portfolio">
       <Section id="portfolio" className="portfolio-section">
