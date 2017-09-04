@@ -1,0 +1,17 @@
+.portfolio {
+
+  .portfolio-list__item {
+    
+    .card {
+      margin-bottom: 2rem;
+    }
+
+    .card-title {
+      margin-bottom: 0;
+      
+      a {
+        color: $semi-black;
+      }
+    }
+  }
+}
