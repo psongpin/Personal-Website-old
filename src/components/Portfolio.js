@@ -8,7 +8,9 @@ const Portfolio = () =>
     <Row className="portfolio-list">
       <Col className="portfolio-list__item col-md-4">
         <div className="card">
-          <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          <a href="#">
+            <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          </a>
           <div className="card-block">
             <p className="card-title"><a href="#">Card title</a></p>
           </div>
@@ -16,7 +18,9 @@ const Portfolio = () =>
       </Col>
       <Col className="portfolio-list__item col-md-4">
         <div className="card">
-          <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          <a href="#">
+            <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          </a>
           <div className="card-block">
             <p className="card-title"><a href="#">Card title</a></p>
           </div>
@@ -24,7 +28,9 @@ const Portfolio = () =>
       </Col>
       <Col className="portfolio-list__item col-md-4">
         <div className="card">
-          <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          <a href="#">
+            <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          </a>
           <div className="card-block">
             <p className="card-title"><a href="#">Card title</a></p>
           </div>
@@ -32,7 +38,9 @@ const Portfolio = () =>
       </Col>
       <Col className="portfolio-list__item col-md-4">
         <div className="card">
-          <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          <a href="#">
+            <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          </a>
           <div className="card-block">
             <p className="card-title"><a href="#">Card title</a></p>
           </div>
@@ -40,7 +48,9 @@ const Portfolio = () =>
       </Col>
       <Col className="portfolio-list__item col-md-4">
         <div className="card">
-          <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          <a href="#">
+            <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          </a>
           <div className="card-block">
             <p className="card-title"><a href="#">Card title</a></p>
           </div>
@@ -48,7 +58,9 @@ const Portfolio = () =>
       </Col>
       <Col className="portfolio-list__item col-md-4">
         <div className="card">
-          <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          <a href="#">
+            <img className="card-img-top img-fluid" src="http://via.placeholder.com/350x250" alt="test" />
+          </a>
           <div className="card-block">
             <p className="card-title"><a href="#">Card title</a></p>
           </div>
