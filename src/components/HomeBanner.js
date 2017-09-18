@@ -12,7 +12,9 @@ const HomeBaner = () =>
         <p className="text">Committed to Learn Forever.</p>
       </Col>
       
-      <Col className="img-content"></Col>
+      <Col className="img-content">
+        <img className="img-fluid" src="https://dummyimage.com/600x600/000/fff&text=+" alt="paul"/>
+      </Col>
     </Row>
   </Container>
 
