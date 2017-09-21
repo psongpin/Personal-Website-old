@@ -1,8 +1,10 @@
 @mixin defaultTransition() {
+  -webkit-transition: all .4s ease-out;
   transition: all .4s ease-out;
 }
 
 @mixin customTransition($duration) {
+  -webkit-transition: all $duration ease-out;
   transition: all $duration ease-out;
 }
 

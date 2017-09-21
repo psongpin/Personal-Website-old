@@ -5,10 +5,11 @@
     img{
       width: 125px;
       margin-bottom: 50px;
-      filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+              filter: grayscale(1);
       @include defaultTransition();
 
-      &:hover{ filter: grayscale(0); }
+      &:hover{ -webkit-filter: grayscale(0); filter: grayscale(0); }
     }
   }
 }
