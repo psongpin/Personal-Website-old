@@ -5,14 +5,14 @@ const HomeBaner = () =>
   <Container className="home-banner">
     <Row className="home-banner-row">
 
-      <Col className="text-content">
+      <Col className="text-content home-banner-cols" xs="12" lg="6">
         <h1>Paul Simon Ongpin</h1>
         <hr className="divider" />
         <p className="h4">Front-end Web Developer</p>
         <p className="text">Committed to Learn Forever.</p>
       </Col>
       
-      <Col className="img-content">
+      <Col className="img-content home-banner-cols" xs="12" lg="6">
         <img className="img-fluid" src="https://dummyimage.com/600x600/000/fff&text=+" alt="paul"/>
       </Col>
     </Row>

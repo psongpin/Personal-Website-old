@@ -5,11 +5,11 @@ import Scroll, { Link } from 'react-scroll'
 const About = () => 
   <Container className="about">
     <Row>
-      <Col className="about-image-col" sm="6">
+      <Col className="about-image-col" xs="12" lg="6">
         <img className="img-fluid" src="https://dummyimage.com/600x800/000/fff&text=+" alt="paul"/>
       </Col>
 
-      <Col className="about-content-col" sm="6">
+      <Col className="about-content-col" xs="12" lg="6">
         <h2>Hi! My Name is <strong className="paul-name">Paul</strong>.</h2>
         <hr className="divider" /> 
 

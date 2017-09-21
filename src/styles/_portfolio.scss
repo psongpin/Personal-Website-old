@@ -1,6 +1,10 @@
 .portfolio {
 
   .portfolio-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
     
     .card {
       margin-bottom: 2rem;

@@ -38,7 +38,7 @@ const Skills = () =>
 
 const SkillList = ({skillArr}) => {
   const skillListItems = skillArr.map((skill) =>
-    <Col xs='6' sm='4' lg='3' key={skill.skillName}>
+    <Col xs='6' md='4' lg='3' key={skill.skillName}>
       <div className="skill-img"><img src={skill.imgSrc} alt={skill.skillName} className='img-fluid'/></div>
     </Col>
   )

@@ -44,4 +44,16 @@
     }
   }
 
+  @include md-max-media {
+    .about-image-col {
+      order: 2;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .about-content-col {
+      order: 1;
+    }
+  }
+
 }

@@ -12,3 +12,34 @@
   background-color: $bgColor;
   color: $textColor;
 }
+
+// Media Queries
+
+$xs-max: 575px;
+$sm-max: 767px;
+$md-max: 991px;
+$lg-max: 1199px;
+
+@mixin xs-max-media {
+    @media (max-width: $xs-max) {
+        @content;
+    }
+}
+
+@mixin sm-max-media {
+  @media (max-width: $sm-max) {
+      @content;
+  }
+}
+
+@mixin md-max-media {
+  @media (max-width: $md-max) {
+      @content;
+  }
+}
+
+@mixin lg-max-media {
+  @media (max-width: $lg-max) {
+      @content;
+  }
+}

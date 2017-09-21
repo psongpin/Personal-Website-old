@@ -2,7 +2,7 @@ import React from 'react'
 import { Col } from 'reactstrap'
 
 const Project = ({ name, imgUrl, liveUrl }) => (
-  <Col className="portfolio-list__item col-md-4">
+  <Col className="portfolio-list__item" xs="12" md="6" lg="4">
     <div className="card">
       <a href={ liveUrl } target="_blank">
         <img className="card-img-top img-fluid" src={ imgUrl } alt={ name } />

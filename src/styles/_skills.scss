@@ -11,5 +11,12 @@
 
       &:hover{ -webkit-filter: grayscale(0); filter: grayscale(0); }
     }
+
+    @include md-max-media {
+      img {
+        -webkit-filter: none;
+                filter: none;
+      }
+    }
   }
 }

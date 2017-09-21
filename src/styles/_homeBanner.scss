@@ -1,6 +1,6 @@
 .home-banner{
 
-  .col{
+  .home-banner-cols{
     min-height: calc(100vh - 7rem);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12,6 +12,12 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  @include md-max-media {
+    .home-banner-cols {
+      min-height: initial;
+    }
   }
 
   .text-content{
@@ -35,6 +41,19 @@
       border-top: 5px solid #fff;
       margin-bottom: 1.5rem;
     }
+  }
+
+  @include md-max-media {
+    .text-content { 
+      text-align: center;
+      min-height: 400px;
+      padding-bottom: 40px;
+      justify-content: flex-end;
+    
+      .divider {
+        margin-left: auto;
+      }
+    }  
   }
 
 }
