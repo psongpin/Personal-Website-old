@@ -1,59 +1,7 @@
 .about {
   
-  .paul-name {
-    text-decoration: underline;
-  }
-
-  .divider {
-    width: 150px;
-    border-color: $semi-black;
-    border-width: 5px;
-    margin-left: 0; 
-    margin-top: 2rem;
+  .about-blurb {
     margin-bottom: 2rem;
-  }
-
-  .personal-labels { 
-    margin-bottom: 3rem;
-    font-size: 1.25rem;
-    font-weight: 600; 
-  }
-
-  .description-list {
-      padding-left: 1rem;
-      margin-bottom: 3rem;
-
-      a { 
-        color: $semi-black;
-        text-decoration: underline; 
-      }
-  }
-
-  .btn-about {
-    border: 3px solid $semi-black;
-    color: $yellow;
-    background-color: $semi-black;
-
-    &.btn-view-resume {
-      margin-right: 1rem;
-    }
-
-    &:hover {
-      background-color: transparent;
-      color: $semi-black;
-    }
-  }
-
-  @include md-max-media {
-    .about-image-col {
-      order: 2;
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .about-content-col {
-      order: 1;
-    }
   }
 
 }

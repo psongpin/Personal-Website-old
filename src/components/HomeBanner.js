@@ -11,8 +11,8 @@ const HomeBaner = () =>
 
       <Col className="text-content home-banner-cols" xs="12" lg="4">
         <div className="content-wrap">
-          <img src={divider} alt="" className="zigDivider"/>
-          <h1 className="h3">Hello I'm Paul.</h1>
+          <img src={divider} alt="zigzag divider" className="zigDivider"/>
+          <h1 className="h2">Hello I'm Paul.</h1>
           <p>&lt; Front-end Web Developer /&gt;</p>
           <Link to="/404" className="btn btn-rounded">Explore</Link>    
         </div>    

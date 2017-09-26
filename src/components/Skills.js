@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 
 // Asset imports
+import divider from '../styles/Assets/Divider.svg'
 import html5Logo from '../styles/Assets/html5.svg'
 import css3Logo from '../styles/Assets/css3.svg'
 import jsLogo from '../styles/Assets/js.svg'
@@ -32,14 +33,19 @@ const skillArr = [
 
 const Skills = () =>
   <Container className='skills text-center'>
-    <h2 className='section-header'>Skills</h2>
+    <div className='section-head text-center'>
+      <img className='zigDivider' src={divider} alt='zigzag divider'/>
+      <h2>Skills</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+    </div>
+
     <SkillList skillArr={skillArr} />
   </Container>
 
 const SkillList = ({skillArr}) => {
   const skillListItems = skillArr.map((skill) =>
     <Col xs='6' md='4' lg='3' key={skill.skillName}>
-      <div className="skill-img"><img src={skill.imgSrc} alt={skill.skillName} className='img-fluid'/></div>
+      <div className='skill-img'><img src={skill.imgSrc} alt={skill.skillName} className='img-fluid'/></div>
     </Col>
   )
 
