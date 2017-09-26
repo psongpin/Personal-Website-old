@@ -1,29 +1,31 @@
 @import '_mixins';
 
 // Variables
-$blue: #40A0E0;
+$blue: #03B9DB;
+$blue-hover: #13a1bb;
 $white: #ffffff;
-$yellow: #F0B840;
-$green: #40C080;
-$sky-blue: #40C8F0;
+$yellow: #FAC05E;
+$dark-yellow: #F4A01E;
+$dark-yellow-hover: #ef9000;
 $semi-black: #1F2D3D;
+$gray: #f7f7f7;
 
 
 // Global Styles
 body{ font-family: 'Poppins', sans-serif; }
 
 h1, .h1{ 
-  font-size: 2.75rem; 
+  font-size: 2.5rem; 
   letter-spacing: .15rem; 
   line-height: 3.25rem; 
 }
 h2, .h2{ 
-  font-size: 2.5rem; 
+  font-size: 2.25rem; 
   letter-spacing: .15rem; 
   line-height: 3rem; 
 }
 h3, .h3{ 
-  font-size: 2rem; 
+  font-size: 2.0rem; 
   letter-spacing: .15rem; 
   line-height: 2.5rem; 
 }
@@ -43,23 +45,70 @@ p { letter-spacing: .1rem; line-height: 1.75rem; }
 a { cursor: pointer; }
 
 .section{ 
-  padding: 3.5rem 0; 
-
-  .section-header{
-    margin-bottom: 1em;
-    text-transform: uppercase; 
+  padding: 8rem 0;
+  
+  &.section-white {
+    padding: 0;
+    margin: 8rem 0;
   }
-
 }
 
-.home-banner-section{ @include sectionBgColorScheme($blue, $white); }
+@include md-max-media {
+  .section {
+    padding: 6rem 0;
+  }
+}
+@include sm-max-media {
+  .section {
+    padding: 4rem 0;
+  }
+}
 
-.about-section { @include sectionBgColorScheme($yellow, $semi-black); }
+.section-head {
+  width: 725px;
+  max-width: 100%;
+  margin: 0 auto 4rem;
 
-.portfolio-section { @include sectionBgColorScheme($green, $white) }
+  h2 {
+    color: $yellow;
+    margin-bottom: 1rem;
+  }
+}
 
-.contact-section{ @include sectionBgColorScheme($sky-blue, $white) }
+.zigDivider { margin-bottom: 1rem; }
 
+.btn-rounded {
+  background-color: $blue;
+  border-radius: 30px;
+  color: #ffffff;
+  width: 200px;
+  padding: .75rem 1rem; 
+
+  &:hover{
+    background-color: $blue-hover;
+    color: #ffffff;
+  }
+
+  &.yellow {
+    background-color: $dark-yellow;
+
+    &:hover {
+      background-color: $dark-yellow-hover;
+    }
+  }
+}
+
+.home-banner-section{ @include sectionBgColorScheme($yellow, $white); }
+
+.about-section { @include sectionBgColorScheme($white, gray); }
+
+.skills-section { @include sectionBgColorScheme($gray, gray); }
+
+.portfolio-section { @include sectionBgColorScheme($white, gray) }
+
+.contact-section{ @include sectionBgColorScheme($blue, $white) }
+
+.footer-bottom{ @include sectionBgColorScheme($white, gray) }
 
 @import '_header';
 @import '_homeBanner';
@@ -67,3 +116,4 @@ a { cursor: pointer; }
 @import '_skills';
 @import '_portfolio';
 @import '_contact';
+@import '_footer';

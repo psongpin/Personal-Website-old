@@ -4,44 +4,38 @@
   left: 0;
   right: 0;
 
-  .nav{
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+  .mid-menu-col {
+    nav {
+      ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    li a{
-      padding: 1.5rem;
-      display: inline-block;
-      color: $white;
-      font-size: 1.25rem;
-      
-
-      span{ 
+      li a{
+        display: block;
+        line-height: 6rem;
+        color: #fff;
+        margin: 0 1.5rem;
         position: relative;
-        padding: 0 5px;
 
-        &:after{
-          content: "";
-          display: block;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 50%;
-          height: 2px;
-          width: 0;
-          margin: 0 auto;
-          background: #fff;
-          opacity: 0;
-          @include customTransition(0.2s);
+        &:hover, &:focus {
+          text-decoration: none;
         }
-      }
 
-      &:hover{
-        text-decoration: none;
-      }
-      &:hover span:after{
-        width: 100%;
-        opacity: .75;
+        &:hover:after, &.active:after {
+          content: '';
+          display: block;
+          height: 3px;
+          width: 100%;
+          background: #e5007e;
+          position: absolute;
+          bottom: 2rem;
+          left: 0;
+        }
       }
     }
   }

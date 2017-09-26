@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/index.scss'
@@ -25,6 +26,7 @@ const TemplateWrapper = ({ children }) =>
     <div className='site-content'>
       {children()}
     </div>
+    <Footer />
   </div>
 
 TemplateWrapper.propTypes = {

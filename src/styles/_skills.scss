@@ -3,13 +3,18 @@
   .skill-img{
 
     img{
-      width: 125px;
-      margin-bottom: 50px;
+      width: 100px;
+      margin-bottom: 3rem;
       -webkit-filter: grayscale(1);
               filter: grayscale(1);
       @include defaultTransition();
 
-      &:hover{ -webkit-filter: grayscale(0); filter: grayscale(0); }
+      &:hover{ 
+        -webkit-filter: grayscale(0); 
+        filter: grayscale(0); 
+        -webkit-transform: scale(1.1); 
+                transform: scale(1.1);
+      }
     }
 
     @include md-max-media {

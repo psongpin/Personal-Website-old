@@ -1,20 +1,31 @@
 import React from 'react'
-import { Container } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
+import Link from 'gatsby-link'
+
+import divider from '../styles/Assets/Divider.svg'
+import paulCTA from '../styles/Assets/CTA.svg'
 
 const Contact = () =>
-  <Container className='contact text-center'>
-    <h2 className='section-header'>Interested working with me?</h2>
-    <a href='mailto: paulsimon.ongpin@gmail.com' className='gf-link h5 btn'>Let's have a chat! &nbsp;<i className="fa fa-comment-o" aria-hidden="true"></i></a>
+  <Container className='contact'>
+    <Row>
+      <Col md='7' className='content-col'>
+        <div className='section-head'>
+          <img className='zigDivider' src={divider} alt='zigzag divider'/>
+          <h2>Let's have a Chat!</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </div>
 
-    <div className="social-links">
-      <h3 className="h4">Find me on:</h3>
-      <p className="social-links-list">
-        <a href="https://www.linkedin.com/in/psongpin/" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a href="https://github.com/psongpin" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/psongpin" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/psongpin" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-      </p>
-    </div>
+        <div className='porfolio-link'>
+          <Link to='/404' className='btn btn-rounded yellow'>Explore</Link>
+        </div>
+      </Col>
+
+      <Col md='5' className='img-col'>
+        <div className='img-container'>
+          <img src={paulCTA} alt='Contact CTA'/>
+        </div>
+      </Col>
+    </Row>
   </Container>
 
 export default Contact
