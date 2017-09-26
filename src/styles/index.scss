@@ -53,6 +53,17 @@ a { cursor: pointer; }
   }
 }
 
+@include md-max-media {
+  .section {
+    padding: 6rem 0;
+  }
+}
+@include sm-max-media {
+  .section {
+    padding: 4rem 0;
+  }
+}
+
 .section-head {
   width: 725px;
   max-width: 100%;
