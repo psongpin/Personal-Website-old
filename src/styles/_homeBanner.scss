@@ -32,7 +32,9 @@
       text-align: center;
       min-height: 400px;
       padding-bottom: 40px;
-      justify-content: flex-end;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
     }  
   }
 

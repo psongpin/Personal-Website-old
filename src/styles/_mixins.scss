@@ -5,6 +5,7 @@
 
 @mixin customTransition($duration) {
   -webkit-transition: all $duration ease-out;
+  -webkit-transition: all $duration ease-in-out;
   transition: all $duration ease-in-out;
 }
 
