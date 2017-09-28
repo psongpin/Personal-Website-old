@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container } from 'reactstrap'
+import Link from 'gatsby-link'
 import Section from './Section'
 import Contact from './Contact'
 
@@ -21,7 +22,9 @@ export default class Footer extends Component {
 
 const FooterBottom = () => 
   <div className='text-center'>
-    <img src='' alt='Paul Simon Ongpin' className='footer-logo'/>
+    <Link className='logo-link' exact to='/' activeClassName='active'>
+      <span className='logo'>P<span>.</span>S<span>.</span> Ongpin</span>
+    </Link>
     <p className='alr-text'>2017. All Rights Reserved</p>
     <p className='social-links'>
       <a href='#' className='fa fa-facebook'></a>

@@ -9,6 +9,7 @@ $dark-yellow: #F4A01E;
 $dark-yellow-hover: #ef9000;
 $semi-black: #1F2D3D;
 $gray: #f7f7f7;
+$dark-pink: #e5007e;
 
 
 // Global Styles
@@ -43,6 +44,23 @@ h5, .h5{
 p { letter-spacing: .1rem; line-height: 1.75rem; }
 
 a { cursor: pointer; }
+
+.logo-link {
+  .logo {
+    color: $white;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .15rem;
+
+    span {
+      color: $dark-pink;
+    }
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
 
 .section{ 
   padding: 8rem 0;

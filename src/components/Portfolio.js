@@ -4,36 +4,42 @@ import Project from './Project'
 import Link from 'gatsby-link'
 
 import divider from '../styles/Assets/Divider.svg'
+import fb from '../styles/Assets/portfolio/farmbase.png'
+import stratus from '../styles/Assets/portfolio/stratus.png'
+import bg from '../styles/Assets/portfolio/bg.png'
+import je from '../styles/Assets/portfolio/je.png'
+import rob from '../styles/Assets/portfolio/630.png'
+import jh from '../styles/Assets/portfolio/jh.png'
 
 const projects = [
   {
     name: 'Farmbase - Hackathon App', 
-    imgUrl: 'http://via.placeholder.com/350x550',
+    imgUrl: fb,
     liveUrl: 'https://globe-hackathon.firebaseapp.com/'
   },
   {
     name: 'Stratus Gas', 
-    imgUrl: 'http://via.placeholder.com/350x550',
+    imgUrl: stratus,
     liveUrl: 'http://stratusgas.com/'
   },
   {
     name: 'Brightgreen', 
-    imgUrl: 'http://via.placeholder.com/350x550',
+    imgUrl: bg,
     liveUrl: 'http://brightgreen.com/'
   },
   {
     name: 'Jesse Hernandez Law Firm', 
-    imgUrl: 'http://via.placeholder.com/350x550',
+    imgUrl: jh,
     liveUrl: 'http://jessehernandezlaw.com/'
   },
   {
     name: '6:30 Partners', 
-    imgUrl: 'http://via.placeholder.com/350x550',
+    imgUrl: rob,
     liveUrl: 'http://6-30partners.com/'
   },
   {
     name: 'J.E. Crawford, Jr. - Associates', 
-    imgUrl: 'http://via.placeholder.com/350x550',
+    imgUrl: je,
     liveUrl: 'https://crawforddefenseattorney.com/'
   }
 ]

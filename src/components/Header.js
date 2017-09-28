@@ -20,36 +20,36 @@ export default class Header extends Component {
   render() {
     return(
       <header className='header'>
-        <div className="container-fluid">
-          <Row className="align-items-center">
-            <Col className="logo-col text-left">
-              <Link exact to="/" activeClassName='active'>
-                <img src="" alt="P.S.Ongpin"/>
+        <div className='container-fluid'>
+          <Row className='align-items-center'>
+            <Col className='logo-col text-left'>
+              <Link className='logo-link' exact to='/' activeClassName='active'>
+                <span className='logo'>P<span>.</span>S<span>.</span> Ongpin</span>
               </Link>
             </Col>
 
-            <Col className="mid-menu-col text-center" lg="7">
+            <Col className='mid-menu-col text-center' lg='7'>
               <nav>
                 <ul>
                   <li>
-                    <Link exact to="/" activeClassName='active'>Home</Link>
+                    <Link exact to='/' activeClassName='active'>Home</Link>
                   </li>
                   <li>
-                    <Link to="/404" activeClassName='active'>About</Link>
+                    <Link to='/404' activeClassName='active'>About</Link>
                   </li>
                   <li>
-                    <Link to="/404" activeClassName='active'>Portfolio</Link>
+                    <Link to='/404' activeClassName='active'>Portfolio</Link>
                   </li>
                   <li>
-                    <Link to="/404" activeClassName='active'>Contact</Link>
+                    <Link to='/404' activeClassName='active'>Contact</Link>
                   </li>
                 </ul>
               </nav>
             </Col>
 
-            <Col className="right-menu-col text-right">
+            <Col className='right-menu-col text-right'>
               <nav>
-                <a href="/" className="btn btn-rounded">View Resume</a>
+                <a href='/' className='btn btn-rounded'>View Resume</a>
               </nav>
             </Col>
           </Row>

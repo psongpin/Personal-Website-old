@@ -3,10 +3,6 @@ footer {
     .footer-bottom {
         padding-top: 4rem;
         padding-bottom: 2rem;
-
-        img {
-            margin-bottom: 1rem;
-        }
     }
 
     .social-links {
@@ -29,6 +25,20 @@ footer {
         
         p {
             margin: 0;
+        }
+    }
+
+    .logo-link {
+
+        display: block;
+        margin-bottom: 1rem;
+        
+        .logo {
+            color: $yellow;
+            
+            span {
+                color: $blue;
+            }
         }
     }
 }
