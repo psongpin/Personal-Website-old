@@ -9,6 +9,7 @@
     "gatsby-link": "latest",
     "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-sass": "^1.0.3",
+    "react-media": "^1.6.1",
     "react-transition-group": "^1.1.2",
     "reactstrap": "^4.8.0"
   },
