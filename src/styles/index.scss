@@ -100,9 +100,11 @@ a { cursor: pointer; }
   border-radius: 30px;
   color: #ffffff;
   width: 200px;
-  padding: .75rem 1rem; 
+  padding: .75rem 1rem;
+  outline: 0 !important;
+  box-shadow: none !important; 
 
-  &:hover{
+  &:hover, &:focus{
     background-color: $blue-hover;
     color: #ffffff;
   }
@@ -110,7 +112,7 @@ a { cursor: pointer; }
   &.yellow {
     background-color: $dark-yellow;
 
-    &:hover {
+    &:hover, &:focus {
       background-color: $dark-yellow-hover;
     }
   }

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
 import Link from 'gatsby-link'
 
+import resume from '../styles/Assets/Paul Simon Ongpin-Resume.pdf'
+
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +51,7 @@ export default class Header extends Component {
 
             <Col className='right-menu-col text-right'>
               <nav>
-                <a href='/' className='btn btn-rounded'>View Resume</a>
+                <a target="_blank" href={resume} className='btn btn-rounded'>View Resume</a>
               </nav>
             </Col>
           </Row>
