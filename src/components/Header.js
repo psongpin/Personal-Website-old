@@ -32,7 +32,7 @@ export default class Header extends Component {
       <header className='header'>
         <div className='container-fluid'>
           <Row className='align-items-center'>
-            <Col className='logo-col text-left' xs="6" lg="3">
+            <Col className='logo-col text-left' xs="8" md="6" lg="3">
               <Link className='logo-link' exact to='/' activeClassName='active'>
                 <span className='logo'>P<span>.</span>S<span>.</span> Ongpin</span>
               </Link>
@@ -44,7 +44,7 @@ export default class Header extends Component {
               </Col>
             )} />
 
-            <Col className='right-menu-col text-right' xs="6" lg="3">
+            <Col className='right-menu-col text-right' xs="4"md="6" lg="3">
               <nav>
                 <Media query={{ minWidth: 768 }} render={() => (
                   <a target="_blank" href={resume} className='btn btn-rounded'>View Resume</a>
@@ -66,7 +66,7 @@ export default class Header extends Component {
   }
 }
 
-const PrimaryNav = ({ isOpen }) => (
+const PrimaryNav = ({ isOpen, toggleClose }) => (
   <nav className={'primary-nav ' + (isOpen ? 'open' : '' )}>
     <ul>
       <li>
@@ -89,7 +89,7 @@ const PrimaryNav = ({ isOpen }) => (
           <a target="_blank" href={resume} className='btn btn-rounded'>View Resume</a>
         </div>
         <div  style={{marginTop: '1rem'}}>
-          <button className='btn btn-rounded' style={{backgroundColor: '#e5007e'}}><span className="fa fa-close"></span>  Close</button>
+          <button className='btn btn-rounded' style={{backgroundColor: '#e5007e'}} onClick={toggleClose}><span className="fa fa-close"></span>  Close</button>
         </div>
       </div>
     )} />
