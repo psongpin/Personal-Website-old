@@ -61,6 +61,13 @@ a { cursor: pointer; }
     text-decoration: none;
   }
 }
+@include sm-max-media {
+  .logo-link {
+    .logo {
+      font-size: 1.75rem;
+    }
+  }
+}
 
 .section{ 
   padding: 8rem 0;
