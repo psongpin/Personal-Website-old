@@ -27,10 +27,10 @@ const FooterBottom = () =>
     </Link>
     <p className='alr-text'>2017. All Rights Reserved</p>
     <p className='social-links'>
-      <a href='#' className='fa fa-facebook'></a>
-      <a href='#' className='fa fa-twitter'></a>
-      <a href='#' className='fa fa-github-alt'></a>
-      <a href='#' className='fa fa-linkedin'></a>
+      <a href='https://www.facebook.com/psongpin' target="_blank" className='fa fa-facebook'></a>
+      <a href='https://twitter.com/psongpin' target="_blank" className='fa fa-twitter'></a>
+      <a href='https://github.com/psongpin' target="_blank" className='fa fa-github-alt'></a>
+      <a href='https://www.linkedin.com/in/psongpin/' target="_blank" className='fa fa-linkedin'></a>
     </p>
 
     <div className='creators'>
