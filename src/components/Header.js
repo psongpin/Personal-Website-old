@@ -83,6 +83,14 @@ const PrimaryNav = ({ isOpen, toggleClose }) => (
       </li>
     </ul>
 
+    <MediaQuery maxWidth={991} minWidth={768}>
+      <div className="text-center">
+        <div  style={{marginTop: '1rem'}}>
+          <button className='btn btn-rounded' style={{backgroundColor: '#e5007e'}} onClick={toggleClose}><span className="fa fa-close"></span>  Close</button>
+        </div>
+      </div>
+    </MediaQuery>
+    
     <MediaQuery maxWidth={767}>
       <div className="text-center">
         <div style={{marginTop: '2rem'}}>
@@ -93,6 +101,5 @@ const PrimaryNav = ({ isOpen, toggleClose }) => (
         </div>
       </div>
     </MediaQuery>
-    
   </nav>
 )
