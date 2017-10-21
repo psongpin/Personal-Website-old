@@ -14,7 +14,7 @@ const HomeBaner = () =>
           <img src={divider} alt='zigzag divider' className='zigDivider'/>
           <h1 className='h2'>Hello I'm Paul.</h1>
           <p>&lt; Front-end Web Developer /&gt;</p>
-          <Link to='/404' className='btn btn-rounded'>Explore</Link>    
+          <Link to='/about' className='btn btn-rounded'>Explore</Link>    
         </div>    
       </Col>
       

@@ -1,10 +1,8 @@
 import React from 'react'
 import Section from '../Section'
 
-import resume from '../../styles/Assets/Paul Simon Ongpin-Resume.pdf'
-
 const AboutMain = () =>
-    <Section className='about-main section-white'>
+    <Section className='about-main'>
       <h2>Hi! My Name is <strong className="paul-name">Paul</strong>.</h2>
       <p>
         <strong>
@@ -36,12 +34,6 @@ const AboutMain = () =>
           <p>Loves learning while having <strong>Pizza</strong>!</p>
         </li>
       </ul>
-
-      <div className="spacer"></div>
-
-      <div className="about-links text-center">
-        <a target="_blank" href={resume} className='btn btn-rounded'>View Resume</a>
-      </div>
     </Section>
 
 export default AboutMain

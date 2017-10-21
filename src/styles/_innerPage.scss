@@ -1,5 +1,7 @@
 .inner-page {
 
+    background-image: url(./Assets/pattern.png); 
+
     .title-banner {
         padding: 10rem 0 6rem;
         background: $yellow;
@@ -15,3 +17,13 @@
         color: gray;
     }
 }
+
+// About Page
+
+.about-page {
+
+    .about-skills {
+        padding-top: 0;
+    }
+}
+
