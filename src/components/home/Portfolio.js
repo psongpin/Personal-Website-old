@@ -49,7 +49,7 @@ const Portfolio = () =>
     <div className='section-head text-center'>
       <img className='zigDivider' src={divider} alt='zigzag divider'/>
       <h2>Portfolio</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Here are some of my projects that I have worked for our satisfied clients.</p>
     </div>
 
     <Row className='portfolio-list'>

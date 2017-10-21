@@ -73,7 +73,7 @@ const PrimaryNav = ({ isOpen, toggleClose }) => (
         <Link exact to='/' activeClassName='active'>Home</Link>
       </li>
       <li>
-        <Link to='/404' activeClassName='active'>About</Link>
+        <Link to='/about' activeClassName='active'>About</Link>
       </li>
       <li>
         <Link to='/404' activeClassName='active'>Portfolio</Link>

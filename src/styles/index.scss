@@ -34,7 +34,14 @@ h5, .h5{
 
 p { letter-spacing: .1rem; line-height: 1.75rem; }
 
-a { cursor: pointer; }
+a { 
+  cursor: pointer; 
+  color: $blue;
+
+  &:hover {
+    color: $blue-hover;
+  }
+}
 
 .logo-link {
   .logo {
@@ -116,6 +123,10 @@ a { cursor: pointer; }
   }
 }
 
+.spacer {
+  margin-bottom: 4rem;
+}
+
 .home-banner-section{ @include sectionBgColorScheme($yellow, $white); }
 
 .about-section { @include sectionBgColorScheme($white, gray); }
@@ -135,3 +146,4 @@ a { cursor: pointer; }
 @import '_portfolio';
 @import '_contact';
 @import '_footer';
+@import '_innerPage';

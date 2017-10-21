@@ -25,13 +25,13 @@ const About = () =>
     <div className='section-head text-center'>
       <img className='zigDivider' src={divider} alt='zigzag divider'/>
       <h2>About Paul</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Frontend Web Developer since 2015. I take learning as a challenge to improve and motivate myself.</p>
     </div>
 
     <AboutBlurbs blurbList={aboutBlurbs}/>
     
     <div className='about-link text-center'>
-      <Link to='/404' className='btn btn-rounded'>Know More</Link>
+      <Link to='/about' className='btn btn-rounded'>Know More</Link>
     </div>
   </Container>
 

@@ -36,7 +36,7 @@ const Skills = () =>
     <div className='section-head text-center'>
       <img className='zigDivider' src={divider} alt='zigzag divider'/>
       <h2>Skills</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>These are my beloved skills that I have learned along the course of my Web Development career!</p>
     </div>
 
     <SkillList skillArr={skillArr} />

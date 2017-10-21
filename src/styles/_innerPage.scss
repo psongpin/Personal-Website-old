@@ -1,0 +1,17 @@
+.inner-page {
+
+    .title-banner {
+        padding: 10rem 0 6rem;
+        background: $yellow;
+        color: #fff;
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .inner-page-content {
+        min-height: 700px;
+        color: gray;
+    }
+}
