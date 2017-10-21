@@ -2,8 +2,8 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Link from 'gatsby-link'
 
-import divider from '../styles/Assets/Divider.svg'
-import paulImage from '../styles/Assets/paulImage.svg'
+import divider from '../../styles/Assets/Divider.svg'
+import paulImage from '../../styles/Assets/paulImage.svg'
 
 const HomeBaner = () =>
   <Container className='home-banner'>

@@ -3,13 +3,13 @@ import { Container, Row, Col } from 'reactstrap'
 import Project from './Project'
 import Link from 'gatsby-link'
 
-import divider from '../styles/Assets/Divider.svg'
-import fb from '../styles/Assets/portfolio/farmbase.png'
-import stratus from '../styles/Assets/portfolio/stratus.png'
-import bg from '../styles/Assets/portfolio/bg.png'
-import je from '../styles/Assets/portfolio/je.png'
-import rob from '../styles/Assets/portfolio/630.png'
-import jh from '../styles/Assets/portfolio/jh.png'
+import divider from '../../styles/Assets/Divider.svg'
+import fb from '../../styles/Assets/portfolio/farmbase.png'
+import stratus from '../../styles/Assets/portfolio/stratus.png'
+import bg from '../../styles/Assets/portfolio/bg.png'
+import je from '../../styles/Assets/portfolio/je.png'
+import rob from '../../styles/Assets/portfolio/630.png'
+import jh from '../../styles/Assets/portfolio/jh.png'
 
 const projects = [
   {

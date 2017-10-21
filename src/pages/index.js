@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Section from '../components/Section'
-import HomeBanner from '../components/HomeBanner'
-import About from '../components/About'
-import Skills from '../components/Skills'
-import Portfolio from '../components/Portfolio'
+import HomeBanner from '../components/home/HomeBanner'
+import About from '../components/home/About'
+import Skills from '../components/home/Skills'
+import Portfolio from '../components/home/Portfolio'
 
 const IndexPage = () =>
   <div className='page-sections'>

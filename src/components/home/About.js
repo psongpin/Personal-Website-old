@@ -2,13 +2,13 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import Link from 'gatsby-link'
 
-import divider from '../styles/Assets/Divider.svg'
-import frontend from '../styles/Assets/frontend.svg'
-import wordpressDev from '../styles/Assets/wordpressdev.svg'
-import communityBuilder from '../styles/Assets/communityBuilder.svg'
-import selfLearner from '../styles/Assets/selfLearner.svg'
-import hobbyist from '../styles/Assets/hobbyist.svg'
-import pizzaLover from '../styles/Assets/pizzaLover.svg'
+import divider from '../../styles/Assets/Divider.svg'
+import frontend from '../../styles/Assets/frontend.svg'
+import wordpressDev from '../../styles/Assets/wordpressdev.svg'
+import communityBuilder from '../../styles/Assets/communityBuilder.svg'
+import selfLearner from '../../styles/Assets/selfLearner.svg'
+import hobbyist from '../../styles/Assets/hobbyist.svg'
+import pizzaLover from '../../styles/Assets/pizzaLover.svg'
 
 
 const aboutBlurbs = [
