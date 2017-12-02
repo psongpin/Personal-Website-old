@@ -2,7 +2,7 @@ import React from 'react'
 import Section from '../Section'
 
 const AboutMain = () =>
-    <Section className='about-main'>
+    <Section className='about-main section-white'>
       <h2>Hi! My Name is <strong className="paul-name">Paul</strong>.</h2>
       <p>
         <strong>

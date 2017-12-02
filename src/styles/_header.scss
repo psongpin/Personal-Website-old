@@ -44,8 +44,14 @@
       }
     }
   }
+}
 
-  @include md-max-media {
+// Responsive Styles ================================================
+
+@include md-max-media {
+  .header {
+    padding: 1rem 0;
+
     .primary-nav {
       padding: 1rem;
       position: fixed;
@@ -71,17 +77,14 @@
                 flex-direction: column;
         list-style: none;
 
-        li {
+        li a {
+          color: $blue;
+          line-height: 3rem;
 
-          a{
-            color: $blue;
-            line-height: 3rem;
-
-            &:hover:after, &.active:after {
-              bottom: .75rem;
-            }
+          &:hover:after, &.active:after {
+            bottom: .75rem;
           }
-        }
+        }  
       }
 
       &.open {
@@ -89,12 +92,6 @@
                 transform: translateX(0);
       }
     }
-  }
-}
-
-@include md-max-media {
-  header {
-    padding: 1rem 0;
 
     .mobile-menu-toggle {
       font-size: 1.25rem;

@@ -59,13 +59,6 @@ a {
     text-decoration: none;
   }
 }
-@include sm-max-media {
-  .logo-link {
-    .logo {
-      font-size: 1.75rem;
-    }
-  }
-}
 
 .section{ 
   padding: 8rem 0;
@@ -73,17 +66,6 @@ a {
   &.section-white {
     padding: 0;
     margin: 8rem 0;
-  }
-}
-
-@include md-max-media {
-  .section {
-    padding: 6rem 0;
-  }
-}
-@include sm-max-media {
-  .section {
-    padding: 4rem 0;
   }
 }
 
@@ -107,7 +89,8 @@ a {
   width: 200px;
   padding: .75rem 1rem;
   outline: 0 !important;
-  box-shadow: none !important; 
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; 
 
   &:hover, &:focus{
     background-color: $blue-hover;
@@ -139,11 +122,42 @@ a {
 
 .footer-bottom{ @include sectionBgColorScheme($white, gray) }
 
+
+// Media Query =======================================================
+
+@include md-max-media {
+  .section {
+    padding: 6rem 0;
+
+    &.section-white {
+      margin: 6rem 0;
+    }
+  }
+}
+
+@include sm-max-media {
+  .section {
+    padding: 4rem 0;
+
+    &.section-white {
+      margin: 4rem 0;
+    }
+  }
+
+  .logo-link {
+    .logo {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+// Imports ============================================== 
+
 @import '_header';
-@import '_homeBanner';
-@import '_about';
-@import '_skills';
-@import '_portfolio';
-@import '_contact';
 @import '_footer';
+@import './home/_homeBanner';
+@import './home/_about';
+@import './home/_skills';
+@import './home/_portfolio';
+@import './home/_contact';
 @import '_innerPage';

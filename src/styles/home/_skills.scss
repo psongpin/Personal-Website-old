@@ -1,0 +1,27 @@
+.skills{
+  .skill-img img{
+    width: 100px;
+    margin-bottom: 3rem;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    @include defaultTransition();
+
+    &:hover{ 
+      -webkit-filter: grayscale(0); 
+      filter: grayscale(0); 
+      -webkit-transform: scale(1.1); 
+              transform: scale(1.1);
+    }
+  }
+}
+
+// Responsive Styles ================================
+
+@include md-max-media {
+  .skills{
+    .skill-img img {
+      -webkit-filter: none;
+              filter: none;
+    }
+  }
+}

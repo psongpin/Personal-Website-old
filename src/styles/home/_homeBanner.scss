@@ -1,5 +1,4 @@
 .home-banner{
-
   .home-banner-cols{
     min-height: 700px;
     display: -webkit-box;
@@ -14,20 +13,21 @@
             justify-content: center;
   }
 
-  @include md-max-media {
-    .home-banner-cols {
-      min-height: initial;
-    }
-  }
-
   .text-content{
-
     p{
       margin-bottom: 4rem;
     }
   }
+}
 
-  @include md-max-media {
+// Responsive Styles =======================================
+
+@include md-max-media {
+  .home-banner{
+    .home-banner-cols {
+      min-height: initial;
+    }
+
     .text-content { 
       text-align: center;
       min-height: 400px;
@@ -35,7 +35,6 @@
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end;
-    }  
+    } 
   }
-
 }

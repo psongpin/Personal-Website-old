@@ -1,29 +1,21 @@
 .inner-page {
+	background-image: url(./Assets/pattern.png); 
 
-    background-image: url(./Assets/pattern.png); 
+	.title-banner {
+		padding: 10rem 0 6rem;
+		background: $yellow;
+		color: #fff;
 
-    .title-banner {
-        padding: 10rem 0 6rem;
-        background: $yellow;
-        color: #fff;
+		h1 {
+			margin: 0;
+		}
+	}
 
-        h1 {
-            margin: 0;
-        }
-    }
-
-    .inner-page-content {
-        min-height: 700px;
-        color: gray;
-    }
+	.inner-page-content {
+		min-height: 700px;
+		color: gray;
+	}
 }
 
 // About Page
-
-.about-page {
-
-    .about-skills {
-        padding-top: 0;
-    }
-}
 

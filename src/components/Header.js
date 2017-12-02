@@ -39,7 +39,7 @@ export default class Header extends Component {
             </Col>
 
             <MediaQuery minWidth={992}>
-              <Col className='mid-menu-col text-center d-xs-none' lg='6'>
+              <Col className='mid-menu-col text-center' lg='6'>
                 <PrimaryNav />
               </Col>
             </MediaQuery>
@@ -70,16 +70,16 @@ const PrimaryNav = ({ isOpen, toggleClose }) => (
   <nav className={'primary-nav ' + (isOpen ? 'open' : '' )}>
     <ul>
       <li>
-        <Link exact to='/' activeClassName='active'>Home</Link>
+        <Link exact to='/' activeClassName='active' onClick={toggleClose}>Home</Link>
       </li>
       <li>
-        <Link to='/about' activeClassName='active'>About</Link>
+        <Link to='/about' activeClassName='active' onClick={toggleClose}>About</Link>
       </li>
       <li>
-        <Link to='/404' activeClassName='active'>Portfolio</Link>
+        <Link to='/404' activeClassName='active' onClick={toggleClose}>Portfolio</Link>
       </li>
       <li>
-        <Link to='/404' activeClassName='active'>Contact</Link>
+        <Link to='/404' activeClassName='active' onClick={toggleClose}>Contact</Link>
       </li>
     </ul>
 
